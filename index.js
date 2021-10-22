@@ -2,7 +2,8 @@
 require('dotenv').config();
 const TeleBot = require('telebot');
 const bot = new TeleBot(process.env.TELEGRAM_TOKEN);
-const destGroupId = process.env.GROUP_ID
+const destGroupId = process.env.GROUP_ID;
+const kokista = "CQACAgIAAxkBAANeYXLk_hVPD5RyVN3E9-fERRiMdr4AAg4VAAK_BrFJOwbZHZOcUD4hBA".toString
 
 bot.on('/help', msg => {
   if (msg.chat) {
@@ -22,7 +23,14 @@ bot.on('/kokista', msg => {
   if (msg.chat) {
     console.log(msg.chat.id)
   }
-  return msg.reply.audio
+  return msg.reply.audio("CQACAgIAAxkBAANeYXLk_hVPD5RyVN3E9-fERRiMdr4AAg4VAAK_BrFJOwbZHZOcUD4hBA");
+});
+
+bot.on('/', msg => {
+  if (msg.chat) {
+    console.log(msg.chat.id)
+  }
+  return msg.reply.audio("CQACAgIAAxkBAANeYXLk_hVPD5RyVN3E9-fERRiMdr4AAg4VAAK_BrFJOwbZHZOcUD4hBA");
 });
 
 bot.on('/sajuot', msg => {
