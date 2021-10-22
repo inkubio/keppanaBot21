@@ -1,9 +1,10 @@
 'use strict'
 
+require('dotenv').config();
 const TeleBot = require('telebot');
-const bot = new TeleBot('2050799354:AAE4aOomrBu7P10wvdTw2S2aSm3trXu_bvM');
+const bot = new TeleBot(TELEGRAM_TOKEN);
 
-const destGroupId = '-1001616598870'
+const destGroupId = GROUP_ID
 
 bot.on('/help', msg => {
   if (msg.chat) {
@@ -13,6 +14,13 @@ bot.on('/help', msg => {
 });
 
 bot.on('/lisaa', msg => {
+  if (msg.chat) {
+    console.log(msg.chat.id)
+  }
+  return msg.reply.text('Ja kovempaa 😉!');
+});
+
+bot.on('/kokista', msg => {
   if (msg.chat) {
     console.log(msg.chat.id)
   }
