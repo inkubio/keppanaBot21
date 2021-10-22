@@ -1,10 +1,8 @@
 'use strict'
-
 require('dotenv').config();
 const TeleBot = require('telebot');
-const bot = new TeleBot(TELEGRAM_TOKEN);
-
-const destGroupId = GROUP_ID
+const bot = new TeleBot(process.env.TELEGRAM_TOKEN);
+const destGroupId = process.env.GROUP_ID
 
 bot.on('/help', msg => {
   if (msg.chat) {
@@ -24,7 +22,7 @@ bot.on('/kokista', msg => {
   if (msg.chat) {
     console.log(msg.chat.id)
   }
-  return msg.reply.text('Ja kovempaa 😉!');
+  return msg.reply.audio
 });
 
 bot.on('/sajuot', msg => {
