@@ -11,7 +11,7 @@ bot.on('/help', msg => {
   if (msg.chat) {
     console.log(msg.chat.id)
   }
-  return msg.reply.text('Kirjota uusi keppanaennätys muodossa:\n/uusiennätys <Nikki> <Ennätys> <Määrä>\n\n\nLaita mulle privaviesti niin välitän keppanachättiin. Vain teksti tuettu eli älä yritä laittaa kuvii, stikui tai gifei yms.');
+  return msg.reply.text('Kirjota uusi keppanaennätys muodossa:\n/uusiennatys <Nikki> <Ennätys> <Määrä>\n\n\nLaita mulle privaviesti niin välitän keppanachättiin. Vain teksti tuettu eli älä yritä laittaa kuvii, stikui tai gifei yms.');
 });
 
 bot.on('/lisaa', msg => {
@@ -49,7 +49,7 @@ bot.on(/^\/uusiennatys (.+)$/, (msg) => {
     }
   } 
   else {
-    return msg.reply.text("Kirjota uusi ennätys muodossa:\n\n" + "/uusiennätys <Nikki> <Ennätys> <Määrä>");
+    return msg.reply.text("Kirjota uusi ennätys muodossa:\n\n" + "/uusiennatys <Nikki> <Ennätys> <Määrä>");
   }
 }); 
 
@@ -106,6 +106,21 @@ bot.on('sticker', msg => {
   }
 })
 
+bot.on('/poistakaikkipliis', msg => {
+  if (msg.chat) {
+    console.log('Kaikki poistettu')
+  }
+  taulukko = [];
+  return msg.reply.text('Kaikki poistettu');
+});
+
+bot.on('/poistavikapliis', msg => {
+  if (msg.chat) {
+    console.log('Kaikki poistettu')
+  }
+  taulukko.pop();
+  return msg.reply.text('Kaikki poistettu');
+}); 
 
 console.log('Listening')
 bot.connect();
