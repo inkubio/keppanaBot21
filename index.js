@@ -5,8 +5,6 @@ const bot = new TeleBot(process.env.TELEGRAM_TOKEN);
 const destGroupId = process.env.GROUP_ID;
 let taulukko = [];
 
-const arrArr =  
-
 bot.on('/help', msg => {
   if (msg.chat) {
     console.log(msg.chat.id)
