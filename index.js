@@ -28,6 +28,20 @@ bot.on('/kokista', msg => {
   return msg.reply.audio("CQACAgIAAxkBAANeYXLk_hVPD5RyVN3E9-fERRiMdr4AAg4VAAK_BrFJOwbZHZOcUD4hBA");
 });
 
+bot.on('/salamoi', msg => {
+  if (msg.chat) {
+    console.log(msg.chat.id)
+  }
+  return msg.reply.audio("CQACAgIAAxkBAAOaYXf9lNSCxuriR7mDokGrB7E1jGQAAuMGAAI_BPFJrkA1R1S730shBA");
+});
+
+bot.on('/piiskattaa', msg => {
+  if (msg.chat) {
+    console.log(msg.chat.id)
+  }
+  return msg.reply.audio("CQACAgIAAxkBAAOZYXf8_CrY_kczbpHSYwdbuKOQPVwAAuwfAAIZQhBLLJ79a8Qf7iYhBA");
+});
+
 bot.on('/sajuot', msg => {
   if (msg.chat) {
     console.log(msg.chat.id)
