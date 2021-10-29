@@ -71,11 +71,6 @@ bot.on('/ennatykset', msg => {
   if (msg.chat) {
     console.log(msg.chat.id)
   }
-  /*let arvot = "";
-  for (let i = 0; i < taulukko.length; i++) {
-    arvot.concat((i + 1) + ". \t" + taulukko[i][0].toString() + "\t" + taulukko[i][1].toString() + "\t" + taulukko[i][2].toString());
-  }
-  */
   console.table(taulukko);
   let arvot = "✨✨✨ENNÄTYSTAULUKKO✨✨✨\n\n";
   for (let i = 0; i < taulukko.length; i++) {
